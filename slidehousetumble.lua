@@ -1,4 +1,4 @@
-
+--Add it to the autoexec folder
 if game.PlaceId == 8438158667 then
 _G.enabled = true
     while _G.enabled == true do
