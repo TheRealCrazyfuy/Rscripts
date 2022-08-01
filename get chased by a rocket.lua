@@ -3,7 +3,7 @@
 while wait() do
 	for i, v in pairs(game:GetService("Workspace").Buttons.RocketButton1.Button:GetDescendants()) do
     if v.Name == "ProximityPrompt" and v.Parent then
-        fireproximityprompt(v, 1000)
+        fireproximityprompt(v, 1)
         break
     end
 end
