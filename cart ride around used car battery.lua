@@ -18,18 +18,15 @@ w1:Toggle(
     false,
     function(toggled)
     	_G.autocollect = toggled
-while _G.autocollect == true do
-    for i, v in pairs(game:GetService("Workspace").coinspawner:GetDescendants()) do
-        if v.Name == "TouchInterest" then
-            firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0)
-            wait(0.1)
-            firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 1)
-            break
+    while _G.autocollect == true do
+        for i, v in pairs(game:GetService("Workspace").coinspawner:GetDescendants()) do
+            if v.Name == "TouchInterest" then
+                firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0)
+            end
         end
-    end
     wait()
 	end
-    end
+end
 ) -- Text, Flag, Enabled, Callback, Flag Location (Optional)
 
 w1:Toggle(
@@ -105,7 +102,7 @@ w1:Slider(
     100
 ) -- Text, Flag, Minimum, Maximum, Callback, Default (Optional), Flag Location (Optional)
 
-w1:Label("ver 1.0")
+w1:Label("ver 1.1")
 
 --w1:Button(
 --    "Destroy GUI",
@@ -119,5 +116,5 @@ w1:Label("ver 1.0")
 --) -- Text, Callback
 
 else
-	game.Players.LocalPlayer:Kick("Dumbass this is not the correct game")
+	game.Players.LocalPlayer:Kick("Dumbass this is not the right game")
 end
