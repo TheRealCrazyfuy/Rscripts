@@ -30,6 +30,29 @@ end
 ) -- Text, Flag, Enabled, Callback, Flag Location (Optional)
 
 w1:Toggle(
+    "spam spawn carts",
+    "carts",
+    false,
+    function(toggled)
+_G.spamcart = toggled
+game:GetService("CoreGui").PurchasePrompt.Enabled = false
+    while _G.spamcart == true do
+			for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+				if v.ClassName == "TouchTransmitter" and v.Parent and v.Parent.Name == "respawn" then
+					print(v)
+					firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0)
+					wait(0.1)
+					firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 1)
+
+				end
+			end
+	wait()
+	end
+    end
+) -- Text, Flag, Enabled, Callback, Flag Location (Optional)
+
+
+w1:Toggle(
     "spam forward",
     "forward",
     false,
@@ -102,7 +125,7 @@ w1:Slider(
     100
 ) -- Text, Flag, Minimum, Maximum, Callback, Default (Optional), Flag Location (Optional)
 
-w1:Label("ver 1.1")
+w1:Label("ver 1.2")
 
 --w1:Button(
 --    "Destroy GUI",
